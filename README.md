@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+Техническое задание
+на разработку
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Сделать сайтик для картинной онлайн-галереи, по продаже и просмотру работ как начинающих художников, так и реплики(копии) популярных картин, 
+также масляные версии, постеры и дизайнерские изделия. В результате должно получиться что-то по типу маркетплейса с картинами.
 
-## Available Scripts
+ЦА ~ 20-40 жм 
 
-In the project directory, you can run:
+!Оплата, привязка карты, подтверждение
+!Ссылки к соц.сетям
+ !Отправка уведомлений на почту
+ Система контроля версий git
+!Расписать странички
+!Сохранение личных кабинетов
 
-### `npm start`
+Пользователь-  Клиентская часть-  Серверная часть(| база данных)-  Внешние сервисы
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Все что начинается с !  - пометка для автора, с / - пометка с функцией, () – уточнение, пояснение,  с (?) – часть под вопросом,  .Если встречается ,  . – вопрос открыт, возможны дополнения в будущем. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Страницы.
+ - Главная страница. Открывается первой, возможность перехода при клике на лого и название.
+   /тут написать про сотрудничество с художниками и описание проекта
+О нас. Раздел на главной странице
+   /контакты с иконками инсты, тг ну и номер с почтой 
+!написать текст описания проекта, актуальности
+Сотрудничество. Блок для художников.
 
-### `npm test`
+ - Каталог. Переход через главную страницу и шапку
+   /разделить по сегментам: 
+	.картины
+	.постеры !написать про печать на заказ
+	.дизайнерские изделия , .           –декор(?)
+ 	Внутри каждого сегмента разделение на подсегменты -  популярные художники, начинающие.
+Выбор сегментов сверху.
+ -Карточки товара. Переход с каталога. В 3 столбца.
+   /тут желательно супер просто и лаконично. 
+С каждой отдельной картиной - цена, описание, какая-то информация про художника(?), размерность, название( если есть ), .  Добавить кнопку нравится( в виде иконки) и добавить в корзину ( в виде кнопки).
+-Художники
+/представление художника, информация про него(  био, чем пишет, что пишет, ),  все его картины( с пометкой статуса)
+ -Доставка и оплата
+. * В шапку
+- Поиск
+/без отдельной страницы
+Оформить поиск с исп ElasticSearch умный поиск
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-Аккаунт. В соответствии с ролью. В шапке.
+Для каждой роли, 
+-Корзина. шапка
+Добавление в корзину, возможность редактирования корзины.
 
-### `npm run build`
+-Нравится. Шапка 
+Просмотр добавление удаление	
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Роли. Уникальные страницы
+Каждому аккаунту ( авторизированному)  с любой ролью присваивается свой уникальный id .
+ 
+Администратор. 
+Управление всеми карточками, аккаунтами и ролями - создание, редактирование, удаление, заморозка ( сделать карточку/аккаунт невидимкой на неопределенный срок).  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Страница со всеми заказами, их редактирование и удаление. Разделение на три сегмента по статусам.
+Дашборд-панель с количеством необработанных заказов (в статусе корзины), оплаченных (в статусе доставки), полностью реализованных (в статусе прибытых)  и общее количество заявок \ по месяцам. Таблица аккаунтов других ролей с колонками.
+ - role, id, name, email, number
+Фильтр по колонке role.
+Страница с заявками художников.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Художник. 
+Страница для редактирования профиля.  Просмотр своей статистики. Добавление информации в свой профиль. Страница с открытыми заказами данного художника без возможности редактирования, удаления и создания, только просмотр. Возможность создания заявки с товаром на рассмотрение администратора.
 
-### `npm run eject`
+Пользователь. 
+Создание аккаунта, использование корзины, добавление карточки в раздел *нравится*. 	
+Создание аккаунта возможно всегда, запрашивается только для оплаты корзины, функции без аккаунта в корзине не ограничиваются.
+Есть страница для редактирования профиля. Страница с уведомлениями ( отслеживание заказа, подтверждение заказа и доставки ). 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+“Поступление заказа”
+После подтверждения оплаты заказа -> Уведомление Администратору о заказе с полной информацией заказчика и Художнику с минимальной информацией о поступлении без личной информации, - заказ в статусе обработки
+“Обработка заказа ”
+Проверка объекта на наличие , подтверждение , - заказ в статусе доставки.
+“Доставка заказа ”
+Заказ передан в доставку-> Подтверждение прибытия, – заказ в статусе закрытых
